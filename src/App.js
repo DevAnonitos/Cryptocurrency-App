@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import { Switch, Route, Link } from 'react-router-dom';
 
@@ -12,8 +12,8 @@ import {
   CryptoDetails, 
   Navbar 
 } from './components';
-import './App.css';
 
+import './App.css';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
               <Switch>
                 <Route exact path="/">
                   <Homepage />
-                </Route>
+                </Route>      
                 <Route exact path="/exchanges">
                   <Exchanges />
                 </Route>
@@ -46,25 +46,26 @@ function App() {
               </Switch>
             </div>
           </Layout>
-        </div>
-        {/* =====================Footer======================= */}
-        <div className='footer'>
-          <Typography.Title 
-            level={5} 
-            style={{ color: 'white', textAlign: 'center' }}
-          >
-            Copyright © 2023
-            <Link to="/">
-             CryptosVeris Inc.
-            </Link> <br />
-            All Rights Reserved.
-          </Typography.Title>
-          <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
-          </Space>
-        </div>
+
+          <div className='footer'>
+            <Typography.Title 
+              level={5} 
+              style={{ color: 'white', textAlign: 'center' }}
+            >
+              Copyright © 2023
+              <Link to="/">
+                😊 CryptosVeris Inc.
+              </Link> <br />
+              All Rights Reserved.
+            </Typography.Title>
+            <Space>
+              <Link to="/">Home</Link>
+              <Link to="/exchanges">Exchanges</Link>
+              <Link to="/news">News</Link>
+            </Space>
+          </div>
+
+        </div>       
       </div>
     </>
   );
