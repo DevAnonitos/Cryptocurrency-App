@@ -25,7 +25,7 @@ function App() {
         </div>
         {/* ++++++++==============Main===============+++++++++ */}
         <div className='main'>
-
+          <Layout />
         </div>
         {/* =====================Footer======================= */}
         <div className='footer'>
