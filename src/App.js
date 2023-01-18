@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Route, Routes, Link } from "react-router-dom";
+import { Switch, Route, Link } from 'react-router-dom';
 
 import { Layout, Typography, Space } from "antd";
 
@@ -25,11 +25,45 @@ function App() {
         </div>
         {/* ++++++++==============Main===============+++++++++ */}
         <div className='main'>
-          <Layout />
+          <Layout>
+            <div className='routes'>
+              <Switch>
+                <Route exact path="/">
+                  <Homepage />
+                </Route>
+                <Route exact path="/exchanges">
+                  <Exchanges />
+                </Route>
+                <Route exact path="/cryptocurrencies">
+                  <Cryptocurrencies />
+                </Route>
+                <Route exact path="/crypto/:coinId">
+                  <CryptoDetails />
+                </Route>
+                <Route exact path="/news">
+                  <News />
+                </Route>
+              </Switch>
+            </div>
+          </Layout>
         </div>
         {/* =====================Footer======================= */}
         <div className='footer'>
-
+          <Typography.Title 
+            level={5} 
+            style={{ color: 'white', textAlign: 'center' }}
+          >
+            Copyright © 2023
+            <Link to="/">
+             CryptosVeris Inc.
+            </Link> <br />
+            All Rights Reserved.
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
         </div>
       </div>
     </>
