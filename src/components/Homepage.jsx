@@ -9,9 +9,11 @@ import Cryptocurrencies from './Cryptocurrencies';
 import News from './News';
 import Loader from './Loader';
 
+
 const { Title } = Typography;
 
 const Homepage = () => {
+
   return (
     <>
       <Title 

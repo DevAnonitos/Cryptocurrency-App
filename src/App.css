@@ -22,6 +22,7 @@
 
 a {
     color: var(--mint-leaf) !important;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover{
@@ -63,7 +64,7 @@ a:hover{
     width: 100%;
 }
 .logo{
-    margin: 15px 0 0 15px;
+    margin: 0px 0 0 15px;
 }
 .logo a{
    color: white;
