@@ -21,6 +21,7 @@
 }
 
 a {
+    color: var(--mint-leaf) !important;
 }
 
 a:hover{
