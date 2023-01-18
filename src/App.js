@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 import { Switch, Route, Link } from 'react-router-dom';
 
-import { Layout, Typography, Space } from "antd";
+import { Layout, Typography, Space, QRCode } from "antd";
 
 import { 
   Exchanges, 
@@ -18,15 +18,15 @@ import './App.css';
 function App() {
   return (
     <>
-      <div className='app'>
+      <div className='app antialiased'>
         {/* ======================NAVBAR====================== */}
-        <div className='navbar'>
+        <div className='navbar antialiased'>
           <Navbar />
         </div>
         {/* ++++++++==============Main===============+++++++++ */}
         <div className='main'>
           <Layout>
-            <div className='routes'>
+            <div className='routes antialiased'>
               <Switch>
                 <Route exact path="/">
                   <Homepage />
@@ -47,7 +47,7 @@ function App() {
             </div>
           </Layout>
 
-          <div className='footer'>
+          <div className='footer antialiased'>
             <Typography.Title 
               level={5} 
               style={{ color: 'white', textAlign: 'center' }}
@@ -58,7 +58,8 @@ function App() {
               </Link> <br />
               All Rights Reserved.
             </Typography.Title>
-            <Space>
+            <QRCode value="https://ant.design/" />
+            <Space size="middle">
               <Link to="/">Home</Link>
               <Link to="/exchanges">Exchanges</Link>
               <Link to="/news">News</Link>

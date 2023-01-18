@@ -35,12 +35,17 @@ const Navbar = () => {
 
   return (
     <div className="nav-container">
-      <div className="logo-container">
+      <div className="logo-container flex items-center justify-center">
         <Avatar 
           src={icon} 
           size="large" 
+          className='brightness-200 cursor-pointer'
         />
-        <Typography.Title level={2} className="logo">
+        <Typography.Title 
+          level={2} 
+          className="logo flex justify-center 
+          align-center antialiased"
+        >
           <Link to="/">
             Cryptoverse
           </Link>
